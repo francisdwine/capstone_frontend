@@ -1,22 +1,26 @@
-import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { TableRow} from "@mui/material";
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+
 export const selectedStyle = {
     backgroundColor: "#fecc00",
     color: "white",
     fontWeight: "bold",
     borderColor: "#fecc00",
-    fontFamily:'Poppins',
+    fontFamily:'Oswald',
     "&:hover": {
       backgroundColor: "#fecc00",
       color: "white",
       borderColor: '#fecc00',
-      fontFamily:'Poppins',
+      fontFamily:'Oswald',
     },
 
   };
   export const unselectedStyle = {
-    fontFamily:'Poppins',
+    fontFamily:'Oswald',
     backgroundColor: "",
     fontWeight: "bold",
     borderColor: "black",
@@ -26,7 +30,7 @@ export const selectedStyle = {
       backgroundColor: "#5A5A5A",
       color: "white",
       borderColor: "#5A5A5A",
-      fontFamily:'Poppins',
+      fontFamily:'Oswald',
     },
 
 
@@ -82,21 +86,59 @@ export const selectedStyle = {
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
-      fontFamily: "Poppins",
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
-      fontFamily: "Poppins",
     },
   }));
 
   export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
-      fontFamily: "Poppins",
     },
     // hide last border
     '&:last-child td, &:last-child th': {
       border: 0,
+    },
+  }));
+
+  export const Search = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
+  }));
+  export const SearchIconWrapper = styled('div')(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }));
+  
+  export const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create('width'),
+      width: '50%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
     },
   }));

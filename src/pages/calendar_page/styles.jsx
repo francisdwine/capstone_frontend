@@ -1,3 +1,7 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100&display=swap');
+</style>
+
 export const ButtonStyle1 = {
     backgroundColor: "#fecc00",
     borderColor: "#fecc00",
@@ -24,16 +28,16 @@ export const ButtonStyle1 = {
     color: "black",
     fontWeight: "bold",
     borderColor: "#fecc00",
-    fontFamily: "Oswald",
+    fontFamily: "Poppins",
     "&:hover": {
       backgroundColor: "#9c7b16",
       color: "white",
       borderColor: "#9c7b16",
-      fontFamily: "Oswald",
+      fontFamily: "Poppins",
     },
   };
  export const unselectedStyle = {
-    fontFamily: "Oswald",
+    fontFamily: "Poppins",
     backgroundColor: "",
     fontWeight: "bold",
     borderColor: "black",
@@ -43,7 +47,7 @@ export const ButtonStyle1 = {
       backgroundColor: "#5A5A5A",
       color: "white",
       borderColor: "#5A5A5A",
-      fontFamily: "Oswald",
+      fontFamily: "Poppins",
     },
   };
 export  const modalStyle = {

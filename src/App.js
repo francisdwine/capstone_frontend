@@ -1,33 +1,29 @@
-
 import './App.css';
+import {
+  BrowserRouter, Routes,
+  Route, Redirect, Link,
+} from 'react-router-dom';
 
 import Calendar from './pages/calendar_page';
-
+import Dashboard from './pages/dashboard';
+import MyReservations from './pages/my_reservations';
+import AttendanceLogs from './pages/attendance_logs';
+import Attendance from './pages/attendance';
+import Home from './pages/home';
 
 function App() {
   return (
-    <div className="App" >
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button>hello</Button>
-        <Card></Card>
-        <Modal open={true}>
-          <Card>dad</Card>
-        </Modal>
-      </header> */}
-      <Calendar></Calendar>
-      
+    <div className="App">
+      <BrowserRouter> 
+      <Routes> 
+        <Route exact path="/" element={<Home />}/> 
+        <Route exact path="/dashboard" element={<Dashboard/>}/>
+        <Route exact path="/calendar" element={<Calendar/>}/>
+        <Route exact path="/logs" element={<AttendanceLogs/>}/>
+        <Route exact path="/bookings" element={<MyReservations/>}/>  
+        <Route exact path="/attendance" element={<Attendance/>}/>
+      </Routes> 
+      </BrowserRouter> 
     </div>
   );
 }

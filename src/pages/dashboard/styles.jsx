@@ -1,6 +1,9 @@
 import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { TableRow} from "@mui/material";
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100&display=swap');
+</style>
 export const selectedStyle = {
     backgroundColor: "#fecc00",
     color: "white",
@@ -80,20 +83,20 @@ export const selectedStyle = {
 
   export const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-      fontFamily: "Poppins",
+      backgroundColor: theme.palette.common.grey,
+      color: theme.palette.common.black,
+      fontFamily:'Poppins',
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
-      fontFamily: "Poppins",
+      fontFamily:'Poppins',
     },
   }));
 
   export const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
-      fontFamily: "Poppins",
+      fontFamily:'Poppins',
     },
     // hide last border
     '&:last-child td, &:last-child th': {
