@@ -18,8 +18,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import logo from '../images/image.png'
-import styles from '../App.css';
+// import logo from '../images/image.png'
+// import styles from '../App.css';
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -115,7 +115,7 @@ export default function DashboardContainer(props) {
         open={open}
       >
         <DrawerHeader sx={{backgroundColor:'#fecc00'}}>
-            <img src={logo} alt="image" />
+            {/* <img src={logo} alt="image" /> */}
             <IconButton onClick={handleDrawerClose}sx={{color:'white'}} color='white' variant='contained'>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
